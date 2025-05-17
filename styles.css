@@ -1,0 +1,436 @@
+/* Mobile-first CSS - Base styles optimized for small screens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Brasika', sans-serif;
+    background-color: #005742; /* New green background */
+    color: #f5f1e9; /* Correct text color */
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden; /* Allow vertical scrolling but hide horizontal */
+    width: 100%;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #f5f1e9; /* Correct text color */
+    text-decoration: none;
+}
+
+/* Language Toggle */
+.language-toggle {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.language-toggle a {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.2rem;
+    color: #f5f1e9;
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.language-toggle a.active {
+    opacity: 1;
+}
+
+.language-toggle a:hover {
+    opacity: 0.9;
+}
+
+/* Logo Section */
+.logo-section {
+    min-height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 4rem;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    gap: 0;
+    width: 100%;
+}
+
+.logo-section h1 {
+    font-family: 'Brasika', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5f1e9;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    width: 100%;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+.title-logo {
+    height: 3rem;
+    width: auto;
+    display: inline-block;
+    margin: 0 2rem;
+    padding: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -0.10em;
+}
+
+/* Pizza Grid */
+.pizza-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding: 1rem;
+    width: 98%;
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pizza-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2rem;
+    width: 100%;
+}
+
+.pizza-card img {
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    box-shadow: 0 25px 60px 0 rgba(0,0,0,0.45), 0 8px 24px 0 rgba(0,0,0,0.30), 0 1.5px 3px 0 rgba(0,0,0,0.18);
+}
+
+.pizza-card h2 {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.4rem; /* Smaller font for mobile */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pizza-card p {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 768px) {
+    .logo-section {
+        height: 15vh;
+        padding: 1rem 0.5rem;
+        width: 100%;
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+    }
+    
+    .logo-section h1 {
+        font-size: 3rem;
+    }
+    
+    .pizza-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1.2rem;
+        width: 96%;
+    }
+    
+    .pizza-card img {
+        max-width: 320px;
+        width: 90%;
+        margin-bottom: 3.5rem;
+    }
+    
+    .pizza-card h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .pizza-card p {
+        font-size: 0.95rem;
+    }
+    
+    .title-logo {
+        height: 4.5rem;
+        margin: 0 3rem;
+        top: -0.12em;
+    }
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 1200px) {
+    .pizza-grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1.2rem;
+        width: 95%;
+        max-width: 1800px;
+    }
+    
+    .logo-section h1 {
+        font-size: 4rem;
+    }
+    
+    .pizza-card img {
+        max-width: 350px;
+        width: 90%;
+        margin-bottom: 4rem;
+    }
+    
+    .title-logo {
+        height: 6rem;
+        margin: 0 4rem;
+        top: -0.14em;
+    }
+    
+    .pizza-card h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .logo-section {
+        padding: 1rem 0.5rem;
+        margin-top: 8rem;
+    }
+    
+    .pizza-card p {
+        font-size: 1rem;
+    }
+}
+
+@font-face {
+    font-family: 'Brasika';
+    src: url('fonts/BrasikaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Chocolates';
+    src: url('fonts/TTChocolates-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.flag-icon {
+    width: 2rem;
+    height: 1.3rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    margin: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Menu Link */
+.menu-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.menu-link {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.2rem;
+    color: #f5f1e9;
+    text-decoration: underline;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.menu-link:hover {
+    opacity: 0.8;
+}
+
+/* Tablet and Desktop adjustments */
+@media screen and (min-width: 768px) {
+    .menu-link {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-link {
+        font-size: 1.6rem;
+    }
+}
+
+/* Allergy Information */
+.allergy-info {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1000px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.allergy-info p {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #f2c94c;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+/* Tablet and Desktop adjustments */
+@media screen and (min-width: 768px) {
+    .allergy-info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .allergy-info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Order Section */
+.order-section {
+    text-align: center;
+    margin: 8rem auto;
+    padding: 0 1rem;
+}
+
+.order-section h2 {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.6rem;
+    color: #f5f1e9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.order-section .phone-number {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.2rem;
+    color: #f5f1e9;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.order-section .order-text {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.2rem;
+    color: #f5f1e9;
+    margin-right: 1rem;
+}
+
+.order-section .phone-number:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet and Desktop adjustments */
+@media screen and (min-width: 768px) {
+    .order-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .order-section .phone-number,
+    .order-section .order-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .order-section h2 {
+        font-size: 2.8rem;
+    }
+    
+    .order-section .phone-number,
+    .order-section .order-text {
+        font-size: 1.6rem;
+    }
+}
+
+/* Opening Hours Section */
+.opening-hours-section {
+    text-align: center;
+    margin: 8rem auto;
+    padding: 0 1rem;
+}
+
+.opening-hours-section h2 {
+    font-family: 'Brasika', sans-serif;
+    font-size: 1.6rem;
+    color: #f5f1e9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.opening-hours-section .hours-content {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #f5f1e9;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.opening-hours-section p {
+    margin: 0;
+    display: block;
+}
+
+/* Tablet and Desktop adjustments */
+@media screen and (min-width: 768px) {
+    .opening-hours-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .opening-hours-section .hours-content {
+        font-size: 1.1rem;
+        gap: 0.5rem;
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .opening-hours-section h2 {
+        font-size: 2.8rem;
+    }
+    
+    .opening-hours-section .hours-content {
+        font-size: 1.2rem;
+        gap: 0.6rem;
+        max-width: 600px;
+    }
+}
