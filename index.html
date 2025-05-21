@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIOSQUE AL FORNO</title>
+    <title>Quiosque Al Forno - Pizzeria Napolitana</title>
+    <meta name="description" content="Autêntica pizzaria napolitana em Silves, Algarve. Pizzas artesanais cozinhadas em forno a lenha com ingredientes frescos e de qualidade.">
+    <meta name="keywords" content="pizza, pizzaria, napolitana, forno a lenha, Silves, Algarve, Portugal, wood-fired, artesanal, comida italiana, delivery, catering, eventos">
+    <meta name="author" content="Quiosque Al Forno">
+    <meta property="og:title" content="Quiosque Al Forno - Pizzeria Napolitana">
+    <meta property="og:description" content="Autêntica pizzaria napolitana em Silves, Algarve. Pizzas artesanais cozinhadas em forno a lenha.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <link rel="icon" href="images/Sem nome (1000 x 1000 px).png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Brasika&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Language Toggle -->
@@ -18,54 +30,74 @@
 
     <!-- Logo Section -->
     <header id="home" class="logo-section">
-        <h1><img src="images/fire cream.png" alt="Logo Symbol" class="title-logo">QUIOSQUE AL FORNO<img src="images/fire cream.png" alt="Logo Symbol" class="title-logo"></h1>
+        <h1><img src="images/symbol yellow.png" alt="Logo Symbol" class="title-logo">QUIOSQUE AL FORNO<img src="images/symbol yellow.png" alt="Logo Symbol" class="title-logo"></h1>
     </header>
 
     <!-- Pizza Grid Section -->
     <section id="menu" class="pizza-grid">
-        <div class="pizza-card">
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/pepperoni.png" alt="Pepperoni Pizza">
             <h2>PEPPERONI</h2>
             <p>Pepperoni, mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.</p>
         </div>
-        <div class="pizza-card">
-            <img src="images/presunto.png" alt="Turbo Margherita Pizza">
-            <h2>TURBO MARGHERITA</h2>
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="images/camponesa.png" alt="Camponesa Pizza">
+            <h2>CAMPONESA</h2>
             <p>Mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.</p>
         </div>
-        <div class="pizza-card">
-            <img src="images/queijo.png" alt="Mascarpone with Spinach Pizza">
-            <h2>MASCARPONE WITH SPINACH</h2>
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="images/tentaçao.png?v=2" alt="Tentação Pizza">
+            <h2>TENTAÇÃO</h2>
             <p>Spinach with mascarpone and nutmeg sauce, gouda, mozzarella and parmesan cheeses, ham, pumpkin seeds.</p>
         </div>
-        <div class="pizza-card">
-            <img src="images/nozes.png" alt="Six Cheeses with Rosemary Pizza">
-            <h2>SIX CHEESES WITH ROSEMARY</h2>
-            <p>Gouda, mozzarella, brie, pecorino, parmesan, mascarpone, caramelized onions, thyme and rosemary sauce.</p>
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="images/saborosa.png" alt="Saborosa Pizza">
+            <h2>SABOROSA</h2>
+            <p>Mozzarella, tomato sauce, fresh basil, olive oil, and traditional Portuguese flavors.</p>
+        </div>
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="images/pedecabra.png" alt="Pé de Cabra Pizza">
+            <h2>PÉ DE CABRA</h2>
+            <p>Goat cheese, caramelized onions, fresh thyme, honey drizzle, and a blend of premium cheeses.</p>
+        </div>
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="images/margherita2.png" alt="Margherita Pizza">
+            <h2>MARGHERITA</h2>
+            <p>Fresh mozzarella, tomato sauce, basil leaves, extra virgin olive oil, and a pinch of sea salt.</p>
         </div>
     </section>
 
     <!-- Allergy Information -->
-    <div class="allergy-info">
+    <div class="allergy-info scroll-animate" data-animation="fade-in">
         <p>Para obter informações sobre alergénios e substâncias que causam intolerância em pratos de comida, pergunte à staff</p>
     </div>
 
     <!-- Menu Button Section -->
-    <div class="menu-button-container">
+    <div class="menu-button-container scroll-animate" data-animation="fade-up">
         <a href="#" class="menu-link">Ver Menu Completo</a>
     </div>
 
+    <!-- Section Divider -->
+    <div class="section-divider scroll-animate" data-animation="zoom-in">
+        <img src="images/symbol yellow.png" alt="Divider Icon" class="divider-icon">
+    </div>
+
     <!-- Order Section -->
-    <div class="order-section">
-        <h2>Encomendar</h2>
-        <span class="order-text">por chamada</span>
-        <a href="tel:+351967928240" class="phone-number">+351 967 928 240</a>
+    <div id="contact" class="order-section">
+        <h2 class="scroll-animate" data-animation="fade-up">ENCOMENDAR</h2>
+        <span class="order-text scroll-animate" data-animation="fade-up">por chamada</span>
+        <a href="tel:+351967928240" class="phone-number scroll-animate" data-animation="fade-up">+351 967 928 240</a>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider scroll-animate" data-animation="zoom-in">
+        <img src="images/symbol yellow.png" alt="Divider Icon" class="divider-icon">
     </div>
 
     <!-- Opening Hours Section -->
     <div class="opening-hours-section">
-        <h2>HORAS DE ABERTURA</h2>
-        <div class="hours-content">
+        <h2 class="scroll-animate" data-animation="fade-up">HORÁRIO</h2>
+        <div class="hours-content scroll-animate" data-animation="fade-up">
             <p>Segunda-feira: Encerrado</p>
             <p>Terça-feira: Encerrado</p>
             <p>Quarta-feira: 18:30 – 21:15</p>
@@ -75,6 +107,101 @@
             <p>Domingo: 18:00 – 21:15</p>
         </div>
     </div>
+    
+    <!-- Section Divider -->
+    <div class="section-divider scroll-animate" data-animation="zoom-in">
+        <img src="images/symbol yellow.png" alt="Divider Icon" class="divider-icon">
+    </div>
+    
+    <!-- Catering Events Section -->
+    <div class="catering-section">
+        <h2 class="scroll-animate" data-animation="fade-up">CATERING</h2>
+        <p class="catering-text scroll-animate" data-animation="fade-up">Disponível para eventos especiais e festas privadas</p>
+        <div class="catering-details scroll-animate" data-animation="fade-up">
+            <div class="catering-detail">
+                <i class="fa fa-users"></i>
+                <span>Grupos de 15-100 pessoas</span>
+            </div>
+            <div class="catering-detail">
+                <i class="fa fa-cutlery"></i>
+                <span>Menu personalizado</span>
+            </div>
+            <div class="catering-detail">
+                <i class="fa fa-map-marker"></i>
+                <span>No local à sua escolha</span>
+            </div>
+        </div>
+        <p class="catering-contact scroll-animate" data-animation="fade-up">Entre em contacto para orçamentos:</p>
+        <div class="catering-contact-options scroll-animate" data-animation="fade-up">
+            <div class="contact-option">
+                <i class="fa fa-phone"></i>
+                <span>+351 967 928 240</span>
+            </div>
+            <div class="contact-option">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:info@quiosquealforno.pt">info@quiosquealforno.pt</a>
+            </div>
+        </div>
+        <p class="catering-note scroll-animate" data-animation="fade-up">Por favor, inclua os seguintes detalhes para orçamento:</p>
+        <ul class="catering-requirements scroll-animate" data-animation="fade-up">
+            <li><i class="fa fa-check-circle"></i> Número de pessoas</li>
+            <li><i class="fa fa-check-circle"></i> Localização</li>
+            <li><i class="fa fa-check-circle"></i> Data e hora</li>
+            <li><i class="fa fa-check-circle"></i> Tipo de evento ou ocasião</li>
+        </ul>
+    </div>
+    
+    <!-- Section Divider -->
+    <div class="section-divider scroll-animate" data-animation="zoom-in">
+        <img src="images/symbol yellow.png" alt="Divider Icon" class="divider-icon">
+    </div>
+
+    <!-- Location Section -->
+    <div class="location-section">
+        <h2 class="scroll-animate" data-animation="fade-up">LOCALIZAÇÃO</h2>
+        <div class="location-content">
+            <div class="address scroll-animate" data-animation="fade-right">
+                <p>Assumadas-Tunes, estrada nacional 269</p>
+                <p>8365-235 Silves</p>
+            </div>
+            <div class="map-container scroll-animate" data-animation="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.710663991522!2d-8.270737726072852!3d37.14207096134878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1acf047730cbbd%3A0xae0057cb72dd4f4d!2sPizzeria%20Quiosque%20Al-Forno!5e0!3m2!1spt-PT!2spt!4v1747674002615!5m2!1spt-PT!2spt" style="border: 8px solid #f2c94c; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider scroll-animate" data-animation="zoom-in">
+        <img src="images/symbol yellow.png" alt="Divider Icon" class="divider-icon">
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="social-section">
+        <h2 class="scroll-animate" data-animation="fade-up">SIGA-NOS</h2>
+        <div class="social-icons">
+            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.1">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.3">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.5">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-logo">
+            <img src="images/symbol yellow.png" alt="Logo Symbol" class="footer-logo-icon">
+            <h3>QUIOSQUE AL FORNO</h3>
+            <img src="images/symbol yellow.png" alt="Logo Symbol" class="footer-logo-icon">
+        </div>
+        <div class="footer-contact">
+            <p>contact: <a href="mailto:info@quiosquealforno.pt">info@quiosquealforno.pt</a></p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>

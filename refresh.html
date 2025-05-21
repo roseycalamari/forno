@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refreshing...</title>
+    <meta http-equiv="refresh" content="1; URL='index.html?refresh=1'" />
+</head>
+<body>
+    <p>Refreshing the page and clearing cache...</p>
+    <script>
+        // Clear browser cache for CSS files
+        window.onload = function() {
+            // Force reload without cache
+            location.href = 'index.html?nocache=' + new Date().getTime();
+        }
+    </script>
+</body>
+</html> 
