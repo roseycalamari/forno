@@ -1620,3 +1620,327 @@ section,
 
 /* All section titles have the same size */
 
+/* Menu Modal Styles */
+.menu-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.menu-modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-modal-title {
+    display: none; /* Hide the title */
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 0.8;
+    z-index: 1005;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-close:hover {
+    color: var(--accent-color);
+}
+
+.menu-slider {
+    position: relative;
+    width: 90%;
+    height: 85%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* Changed from hidden to allow arrows to be visible outside */
+}
+
+.menu-slide {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+    top: 0;
+    transform: translateX(30px);
+}
+
+.menu-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.menu-slide.prev {
+    transform: translateX(-30px);
+}
+
+.menu-slide.next {
+    transform: translateX(30px);
+}
+
+/* Loading spinner */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    animation: spin 1s linear infinite;
+    z-index: 5;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.image-error {
+    color: white;
+    background-color: rgba(220, 50, 50, 0.8);
+    padding: 8px 16px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+}
+
+.menu-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.menu-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Reposition arrows to the sides */
+.slide-arrow {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 18px;
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1003;
+}
+
+.prev-slide {
+    left: 20px;
+}
+
+.next-slide {
+    right: 20px;
+}
+
+.slide-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slide-indicator {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+.download-button {
+    position: absolute;
+    bottom: auto;
+    right: 20px;
+    top: 20px;
+    min-width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 18px;
+    z-index: 1002;
+    backdrop-filter: blur(3px);
+    padding: 0 15px;
+}
+
+.download-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.modal-download-text {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    margin-left: 8px;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-download-text {
+        display: inline-block;
+    }
+    
+    .prev-slide {
+        left: 30px;
+    }
+    
+    .next-slide {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-slider {
+        width: 95%;
+        height: 85%;
+    }
+    
+    .menu-close {
+        top: 15px;
+        right: 15px;
+        font-size: 32px;
+    }
+    
+    .menu-modal-title {
+        font-size: clamp(1.2rem, 3.5vw, 2rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .slide-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .prev-slide {
+        left: 10px;
+    }
+    
+    .next-slide {
+        right: 10px;
+    }
+    
+    .download-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        top: 15px;
+        right: 15px;
+        padding: 0;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-slider {
+        width: 100%;
+        height: 80%;
+    }
+    
+    .menu-nav {
+        gap: 15px;
+    }
+    
+    .slide-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .download-button {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .prev-slide {
+        left: 5px;
+    }
+    
+    .next-slide {
+        right: 5px;
+    }
+}
+

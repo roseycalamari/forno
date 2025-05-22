@@ -67,23 +67,27 @@ const translations = {
         catering_hero_subtitle: "Pizza autêntica em forno a lenha para o seu evento especial",
         catering_email_title: "Entre em Contacto",
         catering_email_text1: "Oferecemos serviço de catering para eventos corporativos, casamentos e festas privadas. Para solicitar mais informações ou obter um orçamento personalizado, entre em contacto connosco por e-mail:",
-        catering_email_text2: "Ou contacte-nos diretamente por telefone:"
+        catering_email_text2: "Ou contacte-nos diretamente por telefone:",
+        
+        // Menu modal
+        menu_modal_title: "Menu Completo",
+        download_button: "Transferir"
     },
     
     en: {
         // Logo/Header
         website_title: "QUIOSQUE AL FORNO",
         
-        // Pizza names and descriptions
+        // Pizza names and descriptions (keeping original Portuguese names)
         pepperoni_title: "PEPPERONI",
         pepperoni_desc: "Pepperoni, mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.",
-        camponesa_title: "COUNTRY STYLE",
+        camponesa_title: "CAMPONESA",
         camponesa_desc: "Mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.",
-        tentacao_title: "TEMPTATION",
+        tentacao_title: "TENTAÇÃO",
         tentacao_desc: "Spinach with mascarpone and nutmeg sauce, gouda, mozzarella and parmesan cheeses, ham, pumpkin seeds.",
-        saborosa_title: "DELICIOUS",
+        saborosa_title: "SABOROSA",
         saborosa_desc: "Mozzarella, tomato sauce, fresh basil, olive oil, and traditional Portuguese flavors.",
-        pedecabra_title: "GOAT'S FOOT",
+        pedecabra_title: "PÉ DE CABRA",
         pedecabra_desc: "Goat cheese, caramelized onions, fresh thyme, honey drizzle, and a blend of premium cheeses.",
         margherita_title: "MARGHERITA",
         margherita_desc: "Fresh mozzarella, tomato sauce, basil leaves, extra virgin olive oil, and a pinch of sea salt.",
@@ -137,23 +141,27 @@ const translations = {
         catering_hero_subtitle: "Authentic wood-fired pizza for your special event",
         catering_email_title: "Contact Us",
         catering_email_text1: "We offer catering services for corporate events, weddings, and private parties. To request more information or get a personalized quote, please contact us by email:",
-        catering_email_text2: "Or contact us directly by phone:"
+        catering_email_text2: "Or contact us directly by phone:",
+        
+        // Menu modal
+        menu_modal_title: "Full Menu",
+        download_button: "Download"
     },
     
     fr: {
         // Logo/Header
         website_title: "QUIOSQUE AL FORNO",
         
-        // Pizza names and descriptions
+        // Pizza names and descriptions (keeping original Portuguese names)
         pepperoni_title: "PEPPERONI",
         pepperoni_desc: "Pepperoni, mozzarella, mascarpone et parmesan, purée de tomates aux herbes.",
-        camponesa_title: "CAMPAGNARDE",
+        camponesa_title: "CAMPONESA",
         camponesa_desc: "Mozzarella, mascarpone et parmesan, purée de tomates aux herbes.",
-        tentacao_title: "TENTATION",
+        tentacao_title: "TENTAÇÃO",
         tentacao_desc: "Épinards à la sauce mascarpone et muscade, gouda, mozzarella et parmesan, jambon, graines de courge.",
-        saborosa_title: "DÉLICIEUSE",
+        saborosa_title: "SABOROSA",
         saborosa_desc: "Mozzarella, sauce tomate, basilic frais, huile d'olive et saveurs traditionnelles portugaises.",
-        pedecabra_title: "PIED DE CHÈVRE",
+        pedecabra_title: "PÉ DE CABRA",
         pedecabra_desc: "Fromage de chèvre, oignons caramélisés, thym frais, filet de miel et un mélange de fromages premium.",
         margherita_title: "MARGHERITA",
         margherita_desc: "Mozzarella fraîche, sauce tomate, feuilles de basilic, huile d'olive extra vierge et une pincée de sel de mer.",
@@ -207,12 +215,23 @@ const translations = {
         catering_hero_subtitle: "Pizza authentique cuite au feu de bois pour votre événement spécial",
         catering_email_title: "Contactez-Nous",
         catering_email_text1: "Nous proposons des services de traiteur pour les événements d'entreprise, mariages et fêtes privées. Pour demander plus d'informations ou obtenir un devis personnalisé, veuillez nous contacter par email:",
-        catering_email_text2: "Ou contactez-nous directement par téléphone:"
+        catering_email_text2: "Ou contactez-nous directement par téléphone:",
+        
+        // Menu modal
+        menu_modal_title: "Menu Complet",
+        download_button: "Télécharger"
     }
 };
 
 // Current language (default: Portuguese)
 let currentLang = 'pt';
+
+// Menu image paths for different languages
+const menuImages = {
+    pt: ['images/menu_pt.png', 'images/menu_pt2.png'],
+    en: ['images/menu_en.png', 'images/menu_en2.png'],
+    fr: ['images/menu_fr.png', 'images/menu_fr2.png']
+};
 
 // Function to translate the page
 function translatePage(lang) {
@@ -223,6 +242,9 @@ function translatePage(lang) {
     
     const t = translations[lang];
     if (!t) return; // If translation not found, exit
+
+    // Update menu images if they exist
+    updateMenuImages(lang);
     
     // Detect if we're on catering page
     const isCateringPage = document.querySelector('.hero-section') !== null;
@@ -368,6 +390,56 @@ function translatePage(lang) {
     if (footerContact && footerContact.firstChild && footerContact.firstChild.nodeType === Node.TEXT_NODE) {
         footerContact.firstChild.nodeValue = t.contact + ' ';
     }
+    
+    // Translate menu modal elements
+    const downloadBtn = document.querySelector('.download-button .modal-download-text');
+    if (downloadBtn) downloadBtn.textContent = t.download_button;
+    
+    const menuModalTitle = document.querySelector('.menu-modal-title');
+    if (menuModalTitle) menuModalTitle.textContent = t.menu_modal_title;
+}
+
+// Function to update menu images based on language
+function updateMenuImages(lang) {
+    const langMenuImages = menuImages[lang] || menuImages.pt; // Fallback to PT if language not found
+    
+    // Update the menu slide images
+    const slides = document.querySelectorAll('.menu-slide');
+    if (slides.length >= 2) {
+        const img1 = slides[0].querySelector('img');
+        const img2 = slides[1].querySelector('img');
+        
+        if (img1) {
+            img1.src = langMenuImages[0];
+            img1.alt = `Menu Page 1 (${lang.toUpperCase()})`;
+        }
+        
+        if (img2) {
+            img2.src = langMenuImages[1];
+            img2.alt = `Menu Page 2 (${lang.toUpperCase()})`;
+        }
+    }
+    
+    // Update download paths
+    updateDownloadPaths();
+}
+
+// Update download paths for the current language
+function updateDownloadPaths() {
+    const langMenuImages = menuImages[currentLang] || menuImages.pt;
+    
+    // Update download paths for each slide
+    downloadPaths = [
+        {path: langMenuImages[0], filename: `Menu_Quiosque_Al_Forno_1_${currentLang}.png`},
+        {path: langMenuImages[1], filename: `Menu_Quiosque_Al_Forno_2_${currentLang}.png`}
+    ];
+    
+    // Update the current download button if it exists
+    const downloadBtn = document.getElementById('current-download-btn');
+    if (downloadBtn && typeof currentSlide !== 'undefined') {
+        downloadBtn.href = downloadPaths[currentSlide].path;
+        downloadBtn.setAttribute('download', downloadPaths[currentSlide].filename);
+    }
 }
 
 // Language toggle functionality
@@ -449,6 +521,168 @@ document.addEventListener('DOMContentLoaded', function() {
             initScrollAnimations();
         });
     }, { passive: true });
+    
+    // Menu Modal Functionality
+    const menuLink = document.querySelector('.menu-link');
+    const menuModal = document.getElementById('menuModal');
+    const closeBtn = document.querySelector('.menu-close');
+    const downloadBtn = document.getElementById('current-download-btn');
+    
+    // Slider elements
+    const slides = document.querySelectorAll('.menu-slide');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    const dots = document.querySelectorAll('.dot');
+    const menuImages = document.querySelectorAll('.menu-image');
+    
+    // Add loading indicators to menu images
+    menuImages.forEach(img => {
+        // Create loading spinner
+        const loadingSpinner = document.createElement('div');
+        loadingSpinner.className = 'loading-spinner';
+        img.parentNode.appendChild(loadingSpinner);
+        
+        // Show loading spinner until image is loaded
+        if (img.complete) {
+            loadingSpinner.style.display = 'none';
+        } else {
+            img.addEventListener('load', function() {
+                loadingSpinner.style.display = 'none';
+            });
+            
+            img.addEventListener('error', function() {
+                loadingSpinner.style.display = 'none';
+                // Add error message
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'image-error';
+                errorMsg.textContent = 'Failed to load image';
+                img.parentNode.appendChild(errorMsg);
+            });
+        }
+    });
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    
+    // Download paths for each slide (will be updated by language)
+    let downloadPaths = [
+        {path: 'images/menu_pt.png', filename: 'Menu_Quiosque_Al_Forno_1_pt.png'},
+        {path: 'images/menu_pt2.png', filename: 'Menu_Quiosque_Al_Forno_2_pt.png'}
+    ];
+    
+    // Update the download paths for the current language
+    updateDownloadPaths();
+    
+    // Update the download button for the current slide
+    const updateDownloadBtn = () => {
+        if (downloadBtn) {
+            downloadBtn.href = downloadPaths[currentSlide].path;
+            downloadBtn.setAttribute('download', downloadPaths[currentSlide].filename);
+        }
+    };
+    
+    // Function to change slides
+    const goToSlide = (slideIndex) => {
+        // Handle index bounds
+        if (slideIndex < 0) {
+            slideIndex = slideCount - 1;
+        } else if (slideIndex >= slideCount) {
+            slideIndex = 0;
+        }
+        
+        // Determine direction for transitions
+        const direction = slideIndex > currentSlide ? 'next' : 'prev';
+        
+        // Remove all classes first
+        slides.forEach(slide => {
+            slide.classList.remove('active', 'prev', 'next');
+        });
+        
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Add appropriate classes based on direction
+        if (direction === 'next') {
+            slides[currentSlide].classList.add('prev');
+        } else {
+            slides[currentSlide].classList.add('next');
+        }
+        
+        // Activate the target slide
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
+        
+        // Update current slide index
+        currentSlide = slideIndex;
+        updateDownloadBtn();
+    };
+    
+    // Initialize slider
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentSlide - 1);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentSlide + 1);
+        });
+        
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+        
+        // Initialize download button
+        updateDownloadBtn();
+    }
+    
+    if (menuLink && menuModal) {
+        // Open modal when clicking the menu link
+        menuLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            menuModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+            
+            // Reset to first slide when opening modal
+            goToSlide(0);
+        });
+        
+        // Close modal when clicking the close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                menuModal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+        
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', function(e) {
+            if (e.target === menuModal) {
+                menuModal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && menuModal.style.display === 'block') {
+                menuModal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+            
+            // Navigate slides with arrow keys
+            if (menuModal.style.display === 'block') {
+                if (e.key === 'ArrowLeft') {
+                    goToSlide(currentSlide - 1);
+                } else if (e.key === 'ArrowRight') {
+                    goToSlide(currentSlide + 1);
+                }
+            }
+        });
+    }
 });
 
 // Initialize page in Portuguese
