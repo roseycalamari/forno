@@ -28,6 +28,18 @@
         <a href="#" data-lang="fr">FR</a>
     </div>
 
+    <!-- Fixed Language Switcher -->
+    <div class="fixed-language-toggle">
+        <a href="#" data-lang="pt" class="active">PT</a>
+        <a href="#" data-lang="en">EN</a>
+        <a href="#" data-lang="fr">FR</a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
     <!-- Logo Section -->
     <header id="home" class="logo-section">
         <h1><img src="images/symbol yellow.png" alt="Logo Symbol" class="title-logo">QUIOSQUE AL FORNO<img src="images/symbol yellow.png" alt="Logo Symbol" class="title-logo"></h1>
@@ -38,32 +50,44 @@
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/pepperoni.png" alt="Pepperoni Pizza">
             <h2>PEPPERONI</h2>
-            <p>Pepperoni, mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.</p>
+            <p class="pt">Chouriço italiano picante com base de molho de tomate.</p>
+            <p class="en">Spicy Italian sausage with tomato sauce base.</p>
+            <p class="fr">Saucisse italienne épicée sur base de sauce tomate.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/camponesa.png" alt="Camponesa Pizza">
             <h2>CAMPONESA</h2>
-            <p>Mozzarella, mascarpone and parmesan cheeses, tomato puree with herbs.</p>
+            <p class="pt">Cogumelos frescos, fiambre azeitonas e base de molho de tomate.</p>
+            <p class="en">Fresh mushrooms, ham, olives and tomato sauce base.</p>
+            <p class="fr">Champignons frais, jambon, olives sur base de sauce tomate.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/tentaçao.png?v=2" alt="Tentação Pizza">
             <h2>TENTAÇÃO</h2>
-            <p>Spinach with mascarpone and nutmeg sauce, gouda, mozzarella and parmesan cheeses, ham, pumpkin seeds.</p>
+            <p class="pt">Cogumelos frescos, chouriço picante, cebola roxa, azeitonas e base de molho de tomate.</p>
+            <p class="en">Fresh mushrooms, spicy sausage, red onion, olives and tomato sauce base.</p>
+            <p class="fr">Champignons frais, saucisse épicée, oignon rouge, olives sur base de sauce tomate.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/saborosa.png" alt="Saborosa Pizza">
             <h2>SABOROSA</h2>
-            <p>Mozzarella, tomato sauce, fresh basil, olive oil, and traditional Portuguese flavors.</p>
+            <p class="pt">Base de azeite de alho, mozzarella, cogumelos frescos, bacon.</p>
+            <p class="en">Garlic olive oil base, mozzarella, fresh mushrooms, bacon.</p>
+            <p class="fr">Base d'huile d'olive à l'ail, mozzarella, champignons frais, lardons.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/pedecabra.png" alt="Pé de Cabra Pizza">
             <h2>PÉ DE CABRA</h2>
-            <p>Goat cheese, caramelized onions, fresh thyme, honey drizzle, and a blend of premium cheeses.</p>
+            <p class="pt">Queijo de cabra, noz, mel, rúcula e base de molho de tomate.</p>
+            <p class="en">Goat cheese, walnuts, honey, arugula and tomato sauce base.</p>
+            <p class="fr">Fromage de chèvre, noix, miel, roquette sur base de sauce tomate.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="images/margherita2.png" alt="Margherita Pizza">
             <h2>MARGHERITA</h2>
-            <p>Fresh mozzarella, tomato sauce, basil leaves, extra virgin olive oil, and a pinch of sea salt.</p>
+            <p class="pt">Mozzarella, manjericão azeite, oregãos e base de molho de tomate.</p>
+            <p class="en">Mozzarella, basil olive oil, oregano and tomato sauce base.</p>
+            <p class="fr">Mozzarella, huile d'olive au basilic, origan sur base de sauce tomate.</p>
         </div>
     </section>
 
@@ -85,8 +109,12 @@
     <!-- Order Section -->
     <div id="contact" class="order-section">
         <h2 class="scroll-animate" data-animation="fade-up">ENCOMENDAR</h2>
-        <span class="order-text scroll-animate" data-animation="fade-up">por chamada</span>
-        <a href="tel:+351967928240" class="phone-number scroll-animate" data-animation="fade-up">+351 967 928 240</a>
+        <div class="contact-buttons scroll-animate" data-animation="fade-up">
+            <a href="tel:+351967928240" class="phone-number">+351 967 928 240</a>
+            <a href="https://wa.me/351967928240" class="whatsapp-button" target="_blank">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+        </div>
     </div>
 
     <!-- Section Divider -->
@@ -116,7 +144,6 @@
     <!-- Catering Events Section -->
     <div class="catering-section">
         <h2 class="scroll-animate" data-animation="fade-up">CATERING</h2>
-        <p class="catering-text scroll-animate" data-animation="fade-up">Disponível para eventos especiais e festas privadas</p>
         <div class="catering-details scroll-animate" data-animation="fade-up">
             <div class="catering-detail">
                 <i class="fa fa-users"></i>
@@ -160,12 +187,18 @@
     <div class="location-section">
         <h2 class="scroll-animate" data-animation="fade-up">LOCALIZAÇÃO</h2>
         <div class="location-content">
-            <div class="address scroll-animate" data-animation="fade-right">
+            <div class="map-container scroll-animate" data-animation="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.710663991522!2d-8.270737726072852!3d37.14207096134878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1acf047730cbbd%3A0xae0057cb72dd4f4d!2sPizzeria%20Quiosque%20Al-Forno!5e0!3m2!1spt-PT!2spt!4v1747674002615!5m2!1spt-PT!2spt&maptype=satellite" style="border: 8px solid #f2c94c; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="address scroll-animate" data-animation="fade-up">
                 <p>Assumadas-Tunes, estrada nacional 269</p>
                 <p>8365-235 Silves</p>
-            </div>
-            <div class="map-container scroll-animate" data-animation="zoom-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.710663991522!2d-8.270737726072852!3d37.14207096134878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1acf047730cbbd%3A0xae0057cb72dd4f4d!2sPizzeria%20Quiosque%20Al-Forno!5e0!3m2!1spt-PT!2spt!4v1747674002615!5m2!1spt-PT!2spt" style="border: 8px solid #f2c94c; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=37.14207096134878,-8.270737726072852" class="directions-link" target="_blank">
+                    <i class="fa fa-map-marker"></i>
+                    <span class="pt">Obter Direções</span>
+                    <span class="en">Get Directions</span>
+                    <span class="fr">Obtenir l'itinéraire</span>
+                </a>
             </div>
         </div>
     </div>
@@ -179,13 +212,13 @@
     <div class="social-section">
         <h2 class="scroll-animate" data-animation="fade-up">SIGA-NOS</h2>
         <div class="social-icons">
-            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.1">
+            <a href="https://www.facebook.com/QuiosquePizzariaAssumadas" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.1" target="_blank">
                 <i class="fa fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.3">
+            <a href="https://www.instagram.com/quiosquealforno/" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.3" target="_blank">
                 <i class="fa fa-instagram"></i>
             </a>
-            <a href="#" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.5">
+            <a href="https://wa.me/351967928240" class="social-icon scroll-animate" data-animation="zoom-in" data-delay="0.5" target="_blank">
                 <i class="fa fa-whatsapp"></i>
             </a>
         </div>
@@ -202,34 +235,6 @@
             <p>contact: <a href="mailto:info@quiosquealforno.pt">info@quiosquealforno.pt</a></p>
         </div>
     </footer>
-
-    <!-- Full Menu Modal -->
-    <div id="menuModal" class="menu-modal">
-        <div class="menu-modal-content">
-            <span class="menu-close">&times;</span>
-            <h3 class="menu-modal-title">Menu Completo</h3>
-            <div class="menu-slider">
-                <div class="menu-slide active" data-slide="0">
-                    <img src="images/menu_pt.png" alt="Menu Page 1 (PT)" class="menu-image">
-                </div>
-                <div class="menu-slide" data-slide="1">
-                    <img src="images/menu_pt2.png" alt="Menu Page 2 (PT)" class="menu-image">
-                </div>
-                <button class="slide-arrow prev-slide" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
-                <button class="slide-arrow next-slide" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
-                <div class="menu-nav">
-                    <div class="slide-indicator">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                    </div>
-                </div>
-                <a href="#" class="download-button" id="current-download-btn">
-                    <i class="fa fa-download"></i>
-                    <span class="modal-download-text">Transferir</span>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <script src="scripts.js"></script>
 </body>
