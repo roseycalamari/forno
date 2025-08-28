@@ -72,11 +72,7 @@ const translations = {
         menu_modal_title: "Menu Completo",
         download_button: "Transferir",
         
-        // Holiday notice
-        holiday_title: "🏖️ FECHADOS PARA FÉRIAS 🏖️",
-        holiday_message: "Estamos de férias! Voltamos a 27 de Agosto com toda a energia para voltar com a autêntica pizza napolitana!",
-        holiday_return_label: "Voltamos a:",
-        holiday_return_date: "27 de Agosto"
+
     },
     
     en: {
@@ -151,11 +147,7 @@ const translations = {
         menu_modal_title: "Full Menu",
         download_button: "Download",
         
-        // Holiday notice
-        holiday_title: "🏖️ CLOSED FOR HOLIDAYS 🏖️",
-        holiday_message: "We're on holiday! We'll be back on August 27th with all the energy to return with authentic Neapolitan pizza!",
-        holiday_return_label: "We'll be back on:",
-        holiday_return_date: "August 27th"
+
     },
     
     fr: {
@@ -230,11 +222,7 @@ const translations = {
         menu_modal_title: "Menu Complet",
         download_button: "Télécharger",
         
-        // Holiday notice
-        holiday_title: "🏖️ FERMÉS POUR LES VACANCES 🏖️",
-        holiday_message: "Nous sommes en vacances ! Nous serons de retour le 27 août avec toute l'énergie pour revenir avec l'authentique pizza napolitaine !",
-        holiday_return_label: "Nous serons de retour le:",
-        holiday_return_date: "27 Août"
+
     }
 };
 
@@ -323,18 +311,7 @@ function translatePage(lang) {
         const allergyInfo = document.querySelector('.allergy-info p');
         if (allergyInfo) allergyInfo.textContent = t.allergy_info;
         
-        // Translate holiday notice
-        const holidayTitle = document.querySelector('.holiday-text h3');
-        if (holidayTitle) holidayTitle.textContent = t.holiday_title;
-        
-        const holidayMessage = document.querySelector('.holiday-text p');
-        if (holidayMessage) holidayMessage.textContent = t.holiday_message;
-        
-        const holidayReturnLabel = document.querySelector('.return-date span');
-        if (holidayReturnLabel) holidayReturnLabel.textContent = t.holiday_return_label;
-        
-        const holidayReturnDate = document.querySelector('.return-date strong');
-        if (holidayReturnDate) holidayReturnDate.textContent = t.holiday_return_date;
+
         
         // Translate menu button
         const menuLink = document.querySelector('.menu-link');
