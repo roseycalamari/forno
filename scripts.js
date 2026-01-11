@@ -279,32 +279,17 @@ function translatePage(lang) {
             emailTexts[1].textContent = t.catering_email_text2;
         }
     } else {
-        // Translate pizza cards
+        // Translate pizza cards (now only 3: Margherita, Pepperoni, Pé de Cabra)
         const pizzaCards = document.querySelectorAll('.pizza-card');
-        if (pizzaCards.length >= 6) {
+        if (pizzaCards.length >= 3) {
+            // Margherita
+            pizzaCards[0].querySelector('h2').textContent = t.margherita_title;
+            
             // Pepperoni
-            pizzaCards[0].querySelector('h2').textContent = t.pepperoni_title;
-            pizzaCards[0].querySelector('p').textContent = t.pepperoni_desc;
-            
-            // Camponesa
-            pizzaCards[1].querySelector('h2').textContent = t.camponesa_title;
-            pizzaCards[1].querySelector('p').textContent = t.camponesa_desc;
-            
-            // Tentação
-            pizzaCards[2].querySelector('h2').textContent = t.tentacao_title;
-            pizzaCards[2].querySelector('p').textContent = t.tentacao_desc;
-            
-            // Saborosa
-            pizzaCards[3].querySelector('h2').textContent = t.saborosa_title;
-            pizzaCards[3].querySelector('p').textContent = t.saborosa_desc;
+            pizzaCards[1].querySelector('h2').textContent = t.pepperoni_title;
             
             // Pé de Cabra
-            pizzaCards[4].querySelector('h2').textContent = t.pedecabra_title;
-            pizzaCards[4].querySelector('p').textContent = t.pedecabra_desc;
-            
-            // Margherita
-            pizzaCards[5].querySelector('h2').textContent = t.margherita_title;
-            pizzaCards[5].querySelector('p').textContent = t.margherita_desc;
+            pizzaCards[2].querySelector('h2').textContent = t.pedecabra_title;
         }
         
         // Translate allergy info

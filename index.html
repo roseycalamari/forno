@@ -46,11 +46,6 @@
         <i class="fa fa-arrow-up"></i>
     </a>
 
-    <!-- Created By Tag -->
-    <a href="https://www.cutstudios.pt" class="created-by-tag" target="_blank" rel="noopener noreferrer">
-        <span class="created-by-text">created by</span>
-        <img src="images/logo cut white no background.png" alt="Company Logo" class="created-by-logo">
-    </a>
 
     <!-- Logo Section -->
     <header id="home" class="logo-section">
@@ -58,7 +53,14 @@
     </header>
 
     <!-- Pizza Grid Section -->
-    <section id="menu" class="pizza-grid">
+    <section id="menu" class="pizza-grid pizza-grid-3">
+        <div class="pizza-card scroll-animate" data-animation="fade-up">
+            <img src="pizzas_nova/margherita.png" alt="Margherita Pizza">
+            <h2>MARGHERITA</h2>
+            <p class="pt">Mozzarella, manjericão, azeite, oregãos e base de molho de tomate.</p>
+            <p class="en">Mozzarella, basil, olive oil, oregano and tomato sauce base.</p>
+            <p class="fr">Mozzarella, basilic, huile d'olive, origan sur base de sauce tomate.</p>
+        </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="pizzas_nova/pepperoni new.png" alt="Pepperoni Pizza">
             <h2>PEPPERONI</h2>
@@ -67,50 +69,26 @@
             <p class="fr">Saucisse italienne épicée sur base de sauce tomate.</p>
         </div>
         <div class="pizza-card scroll-animate" data-animation="fade-up">
-            <img src="pizzas_nova/camponesa.png" alt="Camponesa Pizza">
-            <h2>CAMPONESA</h2>
-            <p class="pt">Cogumelos frescos, fiambre azeitonas e base de molho de tomate.</p>
-            <p class="en">Fresh mushrooms, ham, olives and tomato sauce base.</p>
-            <p class="fr">Champignons frais, jambon, olives sur base de sauce tomate.</p>
-        </div>
-        <div class="pizza-card scroll-animate" data-animation="fade-up">
-            <img src="pizzas_nova/tentaçao.png" alt="Tentação Pizza">
-            <h2>TENTAÇÃO</h2>
-            <p class="pt">Cogumelos frescos, chouriço picante, cebola roxa, azeitonas e base de molho de tomate.</p>
-            <p class="en">Fresh mushrooms, spicy sausage, red onion, olives and tomato sauce base.</p>
-            <p class="fr">Champignons frais, saucisse épicée, oignon rouge, olives sur base de sauce tomate.</p>
-        </div>
-        <div class="pizza-card scroll-animate" data-animation="fade-up">
-            <img src="pizzas_nova/saborosa.png" alt="Saborosa Pizza">
-            <h2>SABOROSA</h2>
-            <p class="pt">Base de azeite de alho, mozzarella, cogumelos frescos, bacon.</p>
-            <p class="en">Garlic olive oil base, mozzarella, fresh mushrooms, bacon.</p>
-            <p class="fr">Base d'huile d'olive à l'ail, mozzarella, champignons frais, lardons.</p>
-        </div>
-        <div class="pizza-card scroll-animate" data-animation="fade-up">
             <img src="pizzas_nova/pedecabra.png" alt="Pé de Cabra Pizza">
             <h2>PÉ DE CABRA</h2>
             <p class="pt">Queijo de cabra, noz, mel, rúcula e base de molho de tomate.</p>
             <p class="en">Goat cheese, walnuts, honey, arugula and tomato sauce base.</p>
             <p class="fr">Fromage de chèvre, noix, miel, roquette sur base de sauce tomate.</p>
         </div>
-        <div class="pizza-card scroll-animate" data-animation="fade-up">
-            <img src="pizzas_nova/margherita.png" alt="Margherita Pizza">
-            <h2>MARGHERITA</h2>
-            <p class="pt">Mozzarella, manjericão azeite, oregãos e base de molho de tomate.</p>
-            <p class="en">Mozzarella, basil olive oil, oregano and tomato sauce base.</p>
-            <p class="fr">Mozzarella, huile d'olive au basilic, origan sur base de sauce tomate.</p>
+    </section>
+
+    <!-- Menu Image Section -->
+    <section class="menu-image-section scroll-animate" data-animation="fade-up">
+        <div class="menu-image-container">
+            <img src="images/menu PT.jpeg" alt="Menu" class="menu-display-image pt" data-lang="pt">
+            <img src="images/menu EN.jpeg" alt="Menu" class="menu-display-image en" data-lang="en">
+            <img src="images/menu FR.jpeg" alt="Menu" class="menu-display-image fr" data-lang="fr">
         </div>
     </section>
 
     <!-- Allergy Information -->
     <div class="allergy-info scroll-animate" data-animation="fade-in">
         <p>Para obter informações sobre alergénios e substâncias que causam intolerância em pratos de comida, pergunte ao staff</p>
-    </div>
-
-    <!-- Menu Button Section -->
-    <div class="menu-button-container scroll-animate" data-animation="fade-up">
-        <a href="#" class="menu-link">Ver Menu Completo</a>
     </div>
 
     <!-- Section Divider -->
@@ -245,6 +223,12 @@
         </div>
         <div class="footer-contact">
             <p>contact: <a href="mailto:info@quiosquealforno.pt">info@quiosquealforno.pt</a></p>
+        </div>
+        <div class="footer-credits">
+            <span class="credits-text">website created by</span>
+            <a href="https://www.cutstudios.pt" target="_blank" rel="noopener noreferrer" class="credits-link">
+                <img src="images/logo cut white no background.png" alt="Cut Studios" class="credits-logo">
+            </a>
         </div>
     </footer>
 
