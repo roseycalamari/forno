@@ -32,11 +32,11 @@ const translations = {
         hours_title: "HORÁRIO",
         monday: "Segunda-feira: Encerrado",
         tuesday: "Terça-feira: Encerrado",
-        wednesday: "Quarta-feira: 18:00 – 21:30",
-        thursday: "Quinta-feira: 18:00 – 21:30",
-        friday: "Sexta-feira: 18:00 – 21:45",
-        saturday: "Sábado: 18:00 – 21:45",
-        sunday: "Domingo: 18:00 – 21:30",
+        wednesday: "Quarta-feira: 18:30 – 21:30",
+        thursday: "Quinta-feira: 18:30 – 21:30",
+        friday: "Sexta-feira: 18:30 – 21:45",
+        saturday: "Sábado: 18:30 – 21:45",
+        sunday: "Domingo: 18:30 – 21:30",
         
         // Catering section
         catering_title: "CATERING",
@@ -65,7 +65,7 @@ const translations = {
         catering_hero_title: "Catering Events",
         catering_hero_subtitle: "Pizza autêntica em forno a lenha para o seu evento especial",
         catering_email_title: "Entre em Contacto",
-        catering_email_text1: "Oferecemos serviço de catering para eventos corporativos, casamentos e festas privadas. Para solicitar mais informações ou obter um orçamento personalizado, entre em contacto connosco por e-mail:",
+        catering_email_text1: "Oferecemos serviço de catering para eventos corporativos, casamentos e festas privadas. Para solicitar mais informações ou obter um orçamento personalizado, fale connosco no WhatsApp:",
         catering_email_text2: "Ou contacte-nos diretamente por telefone:",
         
         // Menu modal
@@ -107,11 +107,11 @@ const translations = {
         hours_title: "OPENING HOURS",
         monday: "Monday: Closed",
         tuesday: "Tuesday: Closed",
-        wednesday: "Wednesday: 18:00 – 21:30",
-        thursday: "Thursday: 18:00 – 21:30",
-        friday: "Friday: 18:00 – 21:45",
-        saturday: "Saturday: 18:00 – 21:45",
-        sunday: "Sunday: 18:00 – 21:30",
+        wednesday: "Wednesday: 18:30 – 21:30",
+        thursday: "Thursday: 18:30 – 21:30",
+        friday: "Friday: 18:30 – 21:45",
+        saturday: "Saturday: 18:30 – 21:45",
+        sunday: "Sunday: 18:30 – 21:30",
         
         // Catering section
         catering_title: "CATERING",
@@ -140,7 +140,7 @@ const translations = {
         catering_hero_title: "Catering Events",
         catering_hero_subtitle: "Authentic wood-fired pizza for your special event",
         catering_email_title: "Contact Us",
-        catering_email_text1: "We offer catering services for corporate events, weddings, and private parties. To request more information or get a personalized quote, please contact us by email:",
+        catering_email_text1: "We offer catering services for corporate events, weddings, and private parties. To request more information or get a personalized quote, message us on WhatsApp:",
         catering_email_text2: "Or contact us directly by phone:",
         
         // Menu modal
@@ -182,11 +182,11 @@ const translations = {
         hours_title: "HORAIRES",
         monday: "Lundi: Fermé",
         tuesday: "Mardi: Fermé",
-        wednesday: "Mercredi: 18:00 – 21:30",
-        thursday: "Jeudi: 18:00 – 21:30",
-        friday: "Vendredi: 18:00 – 21:45",
-        saturday: "Samedi: 18:00 – 21:45",
-        sunday: "Dimanche: 18:00 – 21:30",
+        wednesday: "Mercredi: 18:30 – 21:30",
+        thursday: "Jeudi: 18:30 – 21:30",
+        friday: "Vendredi: 18:30 – 21:45",
+        saturday: "Samedi: 18:30 – 21:45",
+        sunday: "Dimanche: 18:30 – 21:30",
         
         // Catering section
         catering_title: "TRAITEUR",
@@ -215,7 +215,7 @@ const translations = {
         catering_hero_title: "Service Traiteur",
         catering_hero_subtitle: "Pizza authentique cuite au feu de bois pour votre événement spécial",
         catering_email_title: "Contactez-Nous",
-        catering_email_text1: "Nous proposons des services de traiteur pour les événements d'entreprise, mariages et fêtes privées. Pour demander plus d'informations ou obtenir un devis personnalisé, veuillez nous contacter par email:",
+        catering_email_text1: "Nous proposons des services de traiteur pour les événements d'entreprise, mariages et fêtes privées. Pour demander plus d'informations ou obtenir un devis personnalisé, contactez-nous sur WhatsApp:",
         catering_email_text2: "Ou contactez-nous directement par téléphone:",
         
         // Menu modal
