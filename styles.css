@@ -351,6 +351,7 @@ body[data-lang="pt"] .pizza-card p.fr {
 .logo-section {
     min-height: 10vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -358,6 +359,7 @@ body[data-lang="pt"] .pizza-card p.fr {
     margin: 2rem auto 2.5rem;
     width: 100%;
     position: relative;
+    gap: 1.5rem;
 }
 
 .logo-section h1 {
@@ -460,6 +462,89 @@ body[data-lang="pt"] .pizza-card p.fr {
     .logo-section h1::after {
         width: clamp(2.5rem, 6vw, 3.5rem);
         height: clamp(2.5rem, 6vw, 3.5rem);
+    }
+}
+
+/* Event Banner (hero section) */
+@keyframes bannerPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(242, 201, 76, 0.5), 0 4px 20px rgba(0, 0, 0, 0.3); }
+    50% { box-shadow: 0 0 12px 2px rgba(242, 201, 76, 0.35), 0 4px 20px rgba(0, 0, 0, 0.3); }
+}
+
+.event-banner {
+    background: linear-gradient(135deg, #003d2e 0%, #005742 40%, #003d2e 100%);
+    border: 3px solid #f2c94c;
+    border-radius: 12px;
+    padding: 1.2rem 2rem;
+    width: min(92%, 700px);
+    animation: bannerPulse 3s ease-in-out infinite;
+}
+
+.event-banner-text {
+    text-align: center;
+}
+
+body[data-lang="pt"] .event-banner-lang.pt,
+body[data-lang="en"] .event-banner-lang.en,
+body[data-lang="fr"] .event-banner-lang.fr,
+body:not([data-lang]) .event-banner-lang.pt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.event-banner-title {
+    font-family: 'Brasika', sans-serif;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    color: #f2c94c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.event-banner-dates {
+    font-family: 'Brasika', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.event-banner-cta {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    color: #f5f1e9;
+    margin-top: 0.2rem;
+    line-height: 1.4;
+}
+
+.event-banner-cta strong {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #f2c94c;
+    text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .event-banner {
+        padding: 1rem 1.2rem;
+    }
+
+    .event-banner-title {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .event-banner {
+        padding: 0.85rem 1rem;
+    }
+
+    .event-banner-cta {
+        font-size: 0.72rem;
     }
 }
 
